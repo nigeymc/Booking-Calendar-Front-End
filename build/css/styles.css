@@ -1,0 +1,419 @@
+iframe {
+  border: none;
+}
+#qc97852880a6626c7c41cbca507482946fb202b9c,
+label[for="qc97852880a6626c7c41cbca507482946fb202b9c"] {
+  display: none;
+}
+
+/* Tabs Section */
+
+.controls {
+  background-color: #eeeeee;
+  font-size: 1.2em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0;
+  border-top: solid 5px #1d1d1d;
+  height: 3em;
+}
+
+.controls__date {
+  width: 13em;
+  text-align: center;
+  padding: 0;
+  background-color: #fff;
+  border-radius: 30px;
+  border: solid 1px #ccc;
+  margin: 1rem;
+  height: 2.3rem;
+  font-size: 0.8em;
+  line-height: 1.8;
+  color: #1d1d1d;
+}
+
+/* #controls,
+#calendar, 
+#provisionalbookings,*/
+.xfpprimary {
+  display: none;
+}
+
+tr.venue {
+  display: none;
+  display: inline-block\8;
+}
+
+.sport20 .topaligned {
+  background-position: bottom left !important;
+  height: 2.3em;
+  line-height: 1.2em;
+  margin-top: 0;
+  padding-top: 0;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.link {
+  margin-top: 0;
+  padding-top: 0;
+  white-space: nowrap;
+  display: block;
+}
+
+/* Tabs Section */
+
+.tabs {
+  background-color: #eeeeee;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.button--dc {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  padding: 1rem !important;
+  border-radius: 100% !important;
+  border: solid 2px #1d1d1d !important;
+  margin: 1rem !important;
+  height: 20px !important;
+  width: 20px !important;
+  position: relative !important;
+  -webkit-box-orient: horizontal !important;
+  -webkit-box-direction: normal !important;
+  -ms-flex-flow: row !important;
+  flex-flow: row !important;
+  -webkit-box-pack: center !important;
+  -ms-flex-pack: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+  background-color: #1d1d1d !important;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.button--dc:hover {
+  background-color: #fff !important;
+  border-color: #000 !important;
+  color: #000 !important;
+  border-width: 2px !important;
+}
+
+.button--dc:focus {
+  border-color: #00847c !important;
+  background-color: #00847c !important;
+}
+
+.button--dc:hover svg {
+  color: #1d1d1d !important;
+}
+
+.button--dc:focus svg,
+.button--dc:active svg {
+  color: #fff !important;
+}
+
+.button--dc:active {
+  background: #c1002b !important;
+  border: solid 2px #c1002b !important;
+}
+
+.button--dc svg {
+  width: 20px !important;
+  height: 20px !important;
+  color: #fff !important;
+  display: -webkit-inline-box !important;
+  display: -ms-inline-flexbox !important;
+  display: inline-flex !important;
+  text-align: center !important;
+  overflow: visible !important;
+  margin: -10px !important;
+  padding: 0 !important;
+  pointer-events: none;
+}
+
+#tabs input[type="radio"]:focus-visible + label {
+  border-color: #00847c !important;
+  background-color: #00847c !important;
+  color: #fff !important;
+}
+
+.tabs__mobile-navigation {
+  display: none;
+}
+
+.tabs__message--mobile {
+  display: none;
+}
+
+.tabs__message--desktop {
+  text-align: left;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 60px;
+  padding: 0 1em;
+}
+
+.tabs__label {
+  border-radius: 200px;
+  -webkit-box-ordinal-group: 2;
+  -ms-flex-order: 1;
+  order: 1;
+  display: block;
+  padding: 0.4rem 1rem;
+  margin-right: 0.4rem;
+  cursor: pointer;
+  font-weight: bold;
+  -webkit-transition: background ease 0.2s;
+  -o-transition: background ease 0.2s;
+  transition: background ease 0.2s;
+  outline: none;
+  background: #1d1d1d;
+  border: solid 2px #1d1d1d;
+  color: #fff;
+  font-size: 1.1rem;
+  letter-spacing: 0.5px;
+  line-height: 1.2;
+}
+
+.tabs__label:hover {
+  text-decoration: underline;
+}
+
+.tabs__label:first-of-type {
+  margin-left: 1.5rem;
+}
+
+.tabs__tab {
+  margin: 20px 0 0 0;
+  -webkit-box-ordinal-group: 100;
+  -ms-flex-order: 99;
+  order: 99;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  width: 100%;
+  display: none;
+  padding: 1em;
+  background: #fff;
+}
+
+.tabs__radio,
+.slots__checkbox {
+  /* display: none; */
+  opacity: 0;
+  position: absolute;
+}
+
+.tabs__radio:checked + .tabs__label {
+  border: solid 1px #1d1d1d;
+  background: #fff;
+  color: #000;
+  margin-top: 1px;
+}
+
+.tabs__radio:checked + .tabs__label + .tabs__tab {
+  display: block;
+}
+
+/* Calendar Grid Section */
+
+.tabs__slots-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  -ms-grid-rows: minmax(30px, auto);
+  grid-auto-rows: minmax(30px, auto);
+  -webkit-column-gap: 10px;
+  -moz-column-gap: 10px;
+  column-gap: 10px;
+  row-gap: 15px;
+  margin-top: 0.5em;
+  left: 20px;
+}
+
+.tabs__slot {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.slots__label {
+  -webkit-box-ordinal-group: 2;
+  -ms-flex-order: 1;
+  order: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: column;
+  flex-flow: column;
+  color: #fff;
+  cursor: pointer;
+  -webkit-transition: background ease 0.2s;
+  -o-transition: background ease 0.2s;
+  transition: background ease 0.2s;
+  background-color: #c1002b;
+  width: 100%;
+  height: auto;
+  padding: 1em;
+  border-radius: 5px;
+  text-align: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-box-pack: center;
+  align-items: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  font-size: 16px;
+}
+
+.slots__checkbox:checked + .slots__label,
+.slots__checkbox[tabindex="-1"] + .slots__label {
+  background-color: #eee;
+  border: solid 1px #ccc;
+  color: #1d1d1d;
+  pointer-events: none;
+}
+
+.slots__checkbox:disabled + .slots__label {
+  background-color: #eee;
+  border: solid 1px #ccc;
+  color: #1d1d1d;
+  pointer-events: none;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+}
+
+/* .slots__checkbox:not(:checked)+.slots__label:hover {
+    background-color: #eee;
+    border: solid 1px #4b5559;
+    color: #000;
+} */
+
+#tabs input[type="checkbox"]:focus-visible + .slots__label {
+  border-color: #00847c !important;
+  background-color: #00847c !important;
+  color: #fff !important;
+}
+
+button.cancel-booking {
+  height: 40px;
+  padding: 0 0.5em;
+  margin-left: 15px;
+}
+
+#provisionalbookings .reserved-bookings li {
+  padding: 0 0 20px;
+}
+
+@media (max-width: 1020px) {
+  .tabs__message--desktop {
+    display: none;
+  }
+
+  .tabs__mobile-navigation {
+    display: block;
+    width: 20rem;
+    padding-left: 1em;
+  }
+
+  .tabs__message--mobile {
+    text-align: left;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    padding: 1em;
+  }
+
+  .tabs__label {
+    display: none;
+    font-size: 1.1rem;
+  }
+
+  .tabs__label--mobile {
+    -ms-flex-item-align: center;
+    -ms-grid-row-align: center;
+    align-self: center;
+    margin-top: 0.75rem;
+    padding: 0;
+    width: 100%;
+  }
+
+  .tabs__radio:checked + .tabs__label + .tabs__tab {
+    display: block;
+  }
+
+  .tabs__select,
+  form:not([class]) select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-position: right 0.75rem center;
+    border-radius: 0;
+  }
+
+  .tabs__slots-container {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .slots__label {
+    padding: 1em;
+    font-size: 14px;
+    height: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: column;
+    flex-flow: column;
+  }
+}
+
+#provisionalbookings .reserved-bookings li {
+  padding: 0 0 20px;
+}
+
+.reserved-bookings li {
+  font-size: 1.25rem;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: row;
+  flex-flow: row;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.editor ul li::before {
+  top: 1rem !important;
+}
+
+/* Generic Styling */
+
+body {
+  background: #eee;
+  min-height: 100vh;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding-top: 10vh;
+  font: 0.85em / 1.5 "Lato", sans-serif;
+  max-width: 100vw;
+  margin: 0 auto;
+}
