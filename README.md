@@ -40,7 +40,7 @@ Not sure how to set up an ES6 project? Watch this [youtube video ](https://www.y
 
 This app is built to run alongside the Greenwich booking calendars. It is a front-end app only. It requires a data source to fetch the calendar data from.
 
-The data source is located in `app.js` as the domain - `export const domain = https://www.royalgreenwich.gov.uk/site/custom_scripts/repo/apps/pitch-bookings2/street-entertainment/;`
+The data source is located in `app.js` as the domain - `export const domain = https://www.royalgreenwich.gov.uk/site/...;`
 
 The calendar component will look like the following `let url = ${domain}/calendar-json.php?sport=24&todayDate=${urlDate}`;
 
