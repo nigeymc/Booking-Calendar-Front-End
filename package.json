@@ -23,7 +23,7 @@
   "dependencies": {
     "@babel/core": "^7.15.0",
     "babel-jest": "^27.0.6",
-    "core-js": "^3.17.3",
+    "core-js": "^3.27.1",
     "regenerator-runtime": "^0.13.9",
     "save": "^2.4.0",
     "unfetch": "^4.2.0"

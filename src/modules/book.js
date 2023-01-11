@@ -1,3 +1,4 @@
+import { forEach } from "core-js/core/array";
 import { fetchData } from "../app";
 import { domain } from "../app";
 import handleCancelBooking from "./handleCancelBooking";
@@ -15,12 +16,6 @@ const book = (reservedSlot) => {
     timeslotID,
     liText,
   ] = reservedSlot;
-
-  let book_details = document.getElementById(
-    "qc97852880a6626c7c41cbca507482946fb202b9c"
-  ).value;
-
-  book_details = book_details.replace(/\s*/, "");
 
   const url = `${domain}makeProvisionalBooking.php?venueID=${venueID}&pitchNumber=${pitchNumber}&sportID=${pitchNumber}&sportID=${sportID}&year=${year}&week=${week}&day=${day}&timeslotID=${timeslotID}&submit=submit`;
 
@@ -57,9 +52,9 @@ const book = (reservedSlot) => {
       reservedBookingsList.innerHTML += `<li>${liText.replace(
         ",",
         " at"
-      )}<span><button class="cancel-booking" type="submit" name="cancel" value="Cancel" data-bid=${
-        data.bookingDetailsID
-      } data-venue=${JSON.stringify(
+      )}<span><button class="cancel-booking" type="submit" name="cancel" value="Cancel" data-id=${
+        data.bookingID
+      } data-bid=${data.bookingDetailsID} data-venue=${JSON.stringify(
         venue.trimEnd()
       )} data-time=${time.trimStart()}>Cancel</button> </span></li>`;
 
@@ -68,6 +63,23 @@ const book = (reservedSlot) => {
       });
 
       sessionStorage.setItem("pb", provisionalBookingsInfo.innerHTML);
+      const hiddenTextArea = document.getElementById(
+        "qc97852880a6626c7c41cbca507482946fb202b9c"
+      );
+      const provisionalBookingsList = document.querySelector(
+        "#provisionalbookings ul"
+      );
+
+      hiddenTextArea.innerText = provisionalBookingsList.textContent
+        .replaceAll("Cancel", ",")
+        .trimEnd();
+
+      let hiddenIds = document.getElementById(
+        "q753c6ace46c10e4096c0a566e311fca3af57f4ec"
+      );
+
+      const id = document.querySelector(".cancel-booking[data-id]");
+      hiddenIds.innerText = id.getAttribute("data-id");
     } else if (
       data.Error.includes("You have already booked 4") &&
       data.BookingDate.includes(savedDate)
@@ -84,30 +96,6 @@ const book = (reservedSlot) => {
         `[data-venue="${venue.trimEnd()}"] > div > input[name="${time.trimStart()}"] + label .status-message`
       );
       slotStatusMessage.innerHTML = `No longer available, <br/>please choose another day & appointment time.`;
-    }
-
-    const element = document.getElementById(
-      "q753c6ace46c10e4096c0a566e311fca3af57f4ec"
-    );
-
-    const anotherElement = document.getElementById(
-      "qc97852880a6626c7c41cbca507482946fb202b9c"
-    );
-
-    const provisionalBookingsList = document.querySelector(
-      "#provisionalbookings ul"
-    );
-
-    const provisionalBookingsListItem = document.querySelector(
-      "#provisionalbookings ul li"
-    );
-
-    if (element.value == "0") {
-      element.value = bookingDetails["bookingDetailsID"];
-    }
-
-    if (provisionalBookingsListItem >= 1) {
-      anotherElement.value = provisionalBookingsList.innerText;
     }
   }); // call `then()` on the returned promise
 };

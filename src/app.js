@@ -78,7 +78,7 @@ const next = document.querySelector(".next");
 
 const prev = document.querySelector(".prev");
 
-export const domain = `https://www.royalgreenwich.gov.uk/`;
+export const domain = `https://www.royalgreenwich.gov.uk/site/...`;
 
 export const setUrlDate = (todaysDate) => {
   // Get current date for API URL
