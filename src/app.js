@@ -78,7 +78,7 @@ const next = document.querySelector(".next");
 
 const prev = document.querySelector(".prev");
 
-export const domain = `https://www.royalgreenwich.gov.uk/site/...`;
+export const domain = `https://www.royalgreenwich.gov.uk/site/custom_scripts/repo/apps/pitch-bookings2/street-entertainment/`;
 
 export const setUrlDate = (todaysDate) => {
   // Get current date for API URL
@@ -113,7 +113,22 @@ const apiUrl = retrieveDate
   ? setSavedDateUrl(retrieveDate)
   : setUrl(setInitDate.formattedControlDate);
 
+// selecting loading div
+const loader = document.querySelector("#loading");
+
+// showing loading
+const displayLoading = () => {
+  loader.classList.add("display");
+  // to stop loading after some time
+};
+
+// hiding loading
+const hideLoading = () => {
+  loader.classList.remove("display");
+};
+
 export const fetchData = (url) => {
+  displayLoading();
   return fetch(url) // return this promise
     .then(checkStatus)
     .then((response) => response.json())
@@ -125,8 +140,10 @@ export const fetchData = (url) => {
 
 const checkStatus = (response) => {
   if (response.ok) {
+    hideLoading();
     return response;
   } else {
+    hideLoading();
     var error = new Error(response.statusText);
     error.response = response;
     return Promise.reject(error);

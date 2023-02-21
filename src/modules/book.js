@@ -40,11 +40,11 @@ const book = (reservedSlot) => {
       let slotStatusMessage = document.querySelector(
         `[data-venue="${venue.trimEnd()}"] > div > input[name="${time.trimStart()}"] + label .status-message`
       );
-      slotStatusMessage.innerHTML = `You have reserved this appoinment time`;
+      slotStatusMessage.innerHTML = `You have reserved this slot`;
 
       if (pbContents.length <= 0) {
         // Update the provisional Booking element with the selected slot info
-        provisionalBookingsInfo.innerHTML = `<p>You have reserved the following appointments: <ul class="reserved-bookings"></ul> <p>They will be reserved for 15 minutes to allow you time to complete the rest of your booking.<br/> Please click 'Next' if you are happy to accept & proceed.</p>`;
+        provisionalBookingsInfo.innerHTML = `<p>You have reserved the following slots: <ul class="reserved-bookings"></ul> <p>They will be reserved for 15 minutes to allow you time to complete the rest of your booking.<br/> Please select 'Next' if you are happy to accept & proceed.</p>`;
       }
 
       const reservedBookingsList = document.querySelector(".reserved-bookings");
@@ -87,7 +87,7 @@ const book = (reservedSlot) => {
       let slotStatusMessage = document.querySelector(
         `[data-venue="${venue.trimEnd()}"] > div > input[name="${time.trimStart()}"] + label .status-message`
       );
-      slotStatusMessage.innerHTML = `No longer available, <br/>you have reserved your maximum number of appointment times.`;
+      slotStatusMessage.innerHTML = `No longer available, <br/>you have reserved your maximum number of slots.`;
     } else if (
       data.Error.includes("You have already booked 2") &&
       data.BookingDate.includes(savedDate)
@@ -95,7 +95,7 @@ const book = (reservedSlot) => {
       let slotStatusMessage = document.querySelector(
         `[data-venue="${venue.trimEnd()}"] > div > input[name="${time.trimStart()}"] + label .status-message`
       );
-      slotStatusMessage.innerHTML = `No longer available, <br/>please choose another day & appointment time.`;
+      slotStatusMessage.innerHTML = `No longer available, <br/>please choose another day & slot.`;
     }
   }); // call `then()` on the returned promise
 };

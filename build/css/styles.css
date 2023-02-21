@@ -405,6 +405,44 @@ button.cancel-booking {
   top: 1rem !important;
 }
 
+/* creating css loader */
+
+#loading {
+  width: 2rem;
+  height: 2rem;
+  border: 5px solid #f3f3f3;
+  border-top: 6px solid #c1002b;
+  border-radius: 100%;
+  margin: auto;
+  display: none;
+  -webkit-animation: spin 1s infinite linear;
+  animation: spin 1s infinite linear;
+  margin-top: 100px;
+}
+#loading.display {
+  display: block;
+}
+@-webkit-keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
 /* Generic Styling */
 
 body {

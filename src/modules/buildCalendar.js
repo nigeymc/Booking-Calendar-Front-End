@@ -77,7 +77,7 @@ const buildCalendar = (data) => {
   // Show message if there are no slots available
   if (slotsCheckBoxes.length < 1) {
     const tabsContentMsg = document.querySelector(".tabs__tab p");
-    tabsContentMsg.innerHTML = `There are currently no appointments available for this date.`;
+    tabsContentMsg.innerHTML = `There are currently no slots available for this date.`;
   }
 
   // Only allow one slot to be checked/booked at the same time

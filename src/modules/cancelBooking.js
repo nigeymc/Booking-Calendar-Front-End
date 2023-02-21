@@ -14,7 +14,7 @@ const cancelBooking = (bookingDetailsID, listItem, venue, time) => {
       let slotStatusMessage = document.querySelector(
         `[data-venue="${venue}"] > div > input[name="${time}"] + label .status-message`
       );
-      slotStatusMessage.innerHTML = `This appointment time is free to reserve`;
+      slotStatusMessage.innerHTML = `This slot is free to reserve`;
 
       let uncheckSlot = document.querySelector(
         `[data-venue="${venue}"] > div > input[name="${time}"]`
